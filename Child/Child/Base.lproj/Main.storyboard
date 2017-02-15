@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doP-5p-TYx">
+                                <rect key="frame" x="146" y="167" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdT-7N-BZT">
+                                <rect key="frame" x="64" y="213" width="246" height="30"/>
+                                <color key="backgroundColor" red="0.54812700320512819" green="0.70494457799145294" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="246" id="2Kg-tm-DPD"/>
+                                    <constraint firstAttribute="height" constant="30" id="8nq-vd-Maw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPT-HI-KoX">
+                                <rect key="frame" x="122" y="278" width="130" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4kh-yZ-Pbk"/>
+                                    <constraint firstAttribute="width" constant="130" id="Z8E-p2-Uv3"/>
+                                </constraints>
+                                <state key="normal" title="Report Location" backgroundImage="oval-button.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reportLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a44-8g-kVa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49803921568627452" green="0.70588235294117641" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="doP-5p-TYx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="147" id="4vz-7d-krV"/>
+                            <constraint firstItem="gdT-7N-BZT" firstAttribute="top" secondItem="doP-5p-TYx" secondAttribute="bottom" constant="25" id="Dum-1e-9js"/>
+                            <constraint firstItem="doP-5p-TYx" firstAttribute="centerX" secondItem="gdT-7N-BZT" secondAttribute="centerX" id="LKA-RP-IjH"/>
+                            <constraint firstItem="MPT-HI-KoX" firstAttribute="top" secondItem="gdT-7N-BZT" secondAttribute="bottom" constant="35" id="Sjd-Dy-qE5"/>
+                            <constraint firstItem="doP-5p-TYx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZUp-IJ-J0b"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MPT-HI-KoX" secondAttribute="bottom" constant="349" id="pWT-Ou-Jt2"/>
+                            <constraint firstItem="doP-5p-TYx" firstAttribute="centerX" secondItem="MPT-HI-KoX" secondAttribute="centerX" id="yAP-14-rqA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userID" destination="gdT-7N-BZT" id="qei-k9-wyH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285" y="382"/>
+        </scene>
+        <!--Location Reported View Controller-->
+        <scene sceneID="tfH-IA-hiq">
+            <objects>
+                <viewController storyboardIdentifier="locationReportedVC" id="Qwr-kF-wKU" customClass="LocationReportedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CR6-Ui-eP5"/>
+                        <viewControllerLayoutGuide type="bottom" id="MWq-W5-alX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NWc-2j-9aE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your location is now" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oBf-HY-Ei4">
+                                <rect key="frame" x="82" y="182" width="211" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="O33-4e-P4v"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="being reported!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ukH-dR-Su3">
+                                <rect key="frame" x="116.5" y="212" width="142" height="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHc-pB-DaX">
+                                <rect key="frame" x="122" y="260" width="130" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ngq-jD-UGg"/>
+                                    <constraint firstAttribute="width" constant="130" id="ZxR-qd-fOS"/>
+                                </constraints>
+                                <state key="normal" title="Done" backgroundImage="oval-button.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="done:" destination="Qwr-kF-wKU" eventType="touchUpInside" id="hIn-mR-ByN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49803921569999998" green="0.70588235290000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oBf-HY-Ei4" firstAttribute="centerX" secondItem="ukH-dR-Su3" secondAttribute="centerX" id="CxQ-Nq-pJ1"/>
+                            <constraint firstItem="oBf-HY-Ei4" firstAttribute="leading" secondItem="NWc-2j-9aE" secondAttribute="leadingMargin" constant="66" id="GP4-pa-fi9"/>
+                            <constraint firstItem="YHc-pB-DaX" firstAttribute="top" secondItem="ukH-dR-Su3" secondAttribute="bottom" constant="18" id="J6Y-C9-haO"/>
+                            <constraint firstItem="oBf-HY-Ei4" firstAttribute="centerX" secondItem="NWc-2j-9aE" secondAttribute="centerX" id="LVH-1d-XLU"/>
+                            <constraint firstItem="oBf-HY-Ei4" firstAttribute="top" secondItem="CR6-Ui-eP5" secondAttribute="bottom" constant="162" id="cYd-XX-5dV"/>
+                            <constraint firstItem="ukH-dR-Su3" firstAttribute="top" secondItem="oBf-HY-Ei4" secondAttribute="bottom" constant="1" id="iv3-VJ-a6w"/>
+                            <constraint firstItem="MWq-W5-alX" firstAttribute="top" secondItem="YHc-pB-DaX" secondAttribute="bottom" constant="367" id="pgK-s3-sxz"/>
+                            <constraint firstItem="oBf-HY-Ei4" firstAttribute="centerX" secondItem="YHc-pB-DaX" secondAttribute="centerX" id="v6e-ln-lNX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jg4-Du-zVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="382"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="oval-button.png" width="280" height="108"/>
+    </resources>
+</document>
